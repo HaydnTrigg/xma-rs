@@ -1,0 +1,13 @@
+[package]
+name = "xma"
+description = "An XMA2 decoder: FFmpeg's xma2 decoder ported to Rust, bit-exact, no dependencies"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+# a port of FFmpeg's LGPL code (README.md, "Licence")
+license = "LGPL-2.1-or-later"
+repository = "https://github.com/HaydnTrigg/xma"
+readme = "README.md"
+keywords = ["xma", "xma2", "audio", "decoder", "xbox"]
+categories = ["multimedia::audio", "multimedia::encoding"]
+exclude = [".github", "deny.toml"]

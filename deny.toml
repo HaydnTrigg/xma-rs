@@ -1,0 +1,38 @@
+[graph]
+targets = []
+all-features = false
+no-default-features = false
+
+[output]
+feature-depth = 1
+
+[licenses]
+# xma itself is LGPL-2.1-or-later (a port of FFmpeg, README.md), so a dependency must be under a
+# licence compatible with the LGPL 2.1. Apache-2.0 is not (FFmpeg's LICENSE.md says as much): a
+# crate offered as "MIT OR Apache-2.0" passes by its MIT side, one under Apache-2.0 alone does not.
+allow = [ "LGPL-2.1-or-later", "MIT", "ISC", "BSD-2-Clause", "BSD-3-Clause", "BSL-1.0", "CC0-1.0", "MPL-2.0", "Unicode-3.0", "Zlib", "0BSD" ]
+confidence-threshold = 0.8
+exceptions = []
+# the list is for dependencies xma may take on; it has none
+unused-allowed-license = "allow"
+
+[licenses.private]
+ignore = false
+registries = []
+
+[bans]
+multiple-versions = "allow"
+wildcards = "allow"
+highlight = "all"
+workspace-default-features = "allow"
+external-default-features = "allow"
+allow = []
+deny = []
+skip = []
+skip-tree = []
+
+[sources]
+unknown-registry = "warn"
+unknown-git = "warn"
+allow-registry = [ "https://github.com/rust-lang/crates.io-index" ]
+allow-git = []
